@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Arafath Hossain | Lead Programmer</title>
+    <style>
+        :root {
+            --primary: #0f2a4a;
+            --secondary: #2563eb;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #cbd5e1;
+            --bg-light: #f8fafc;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.5;
+            background-color: #f1f5f9;
+            padding: 20px;
+        }
+        .page {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .photo-container img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            flex-grow: 1;
+        }
+        h1 {
+            font-size: 24pt;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .subtitle {
+            font-size: 11.5pt;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 9pt;
+            color: var(--text-muted);
+        }
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        section {
+            margin-bottom: 18px;
+        }
+        h2 {
+            font-size: 11pt;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1.5px solid var(--secondary);
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .summary {
+            font-size: 9.5pt;
+            color: var(--text);
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 15px;
+        }
+        .skill-group {
+            font-size: 9pt;
+        }
+        .skill-group strong {
+            color: var(--primary);
+        }
+        .job {
+            margin-bottom: 12px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .job-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .company {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        .date {
+            font-size: 8.5pt;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        ul {
+            margin-left: 18px;
+            margin-top: 4px;
+        }
+        li {
+            font-size: 9pt;
+            color: var(--text);
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+        .projects-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        .project-item {
+            font-size: 9pt;
+        }
+        .project-item a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        .education-item {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9pt;
+        }
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="photo-container">
+                <img src="data:image/jpeg;base64,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" alt="Arafath Hossain Profile Photo">
+            </div>
+            <div class="header-content">
+                <h1>Arafath Hossain</h1>
+                <div class="subtitle">Lead Programmer | Senior Full-Stack Software Engineer</div>
+                <div class="contact-info">
+                    <span>📍 Dhaka, Bangladesh</span>
+                    <span>📞 +880 1684070642</span>
+                    <span>✉️ <a href="mailto:arafath1124@gmail.com">arafath1124@gmail.com</a></span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Results-driven <strong>Lead Programmer & Senior Full-Stack Engineer</strong> with over 7 years of hands-on experience in architectural design, software development, and cloud infrastructure management. Proven leadership in delivering end-to-end web applications, integrating autonomous <strong>AI Agent handling capabilities</strong>, executing <strong>DevOps workflows</strong>, and engineering robust <strong>REST & SOAP APIs</strong> along with seamless, PCI-compliant <strong>payment gateways</strong>. Expert in PHP/Laravel ecosystem (including <strong>Livewire</strong>), JavaScript UI frameworks (Vue.js, Angular), and database optimization.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <strong>Backend & Architecture:</strong> PHP, Laravel, Laravel Livewire, CodeIgniter, OOP, Microservices.
+                </div>
+                <div class="skill-group">
+                    <strong>Frontend Engineering:</strong> JavaScript (ES6+), Vue.js, Angular, jQuery, AJAX, HTML5, CSS3.
+                </div>
+                <div class="skill-group">
+                    <strong>AI & Agent Handling:</strong> AI Agent Integration, LLM API Handling, Prompt Engineering, Multi-agent Workflows.
+                </div>
+                <div class="skill-group">
+                    <strong>DevOps & Infrastructure:</strong> Docker, CI/CD Pipelines, Server Admin (Nginx/Apache), Deployment Automation.
+                </div>
+                <div class="skill-group">
+                    <strong>APIs & Integrations:</strong> RESTful APIs, SOAP Web Services, Payment Gateways (Stripe, PayPal, SSLCommerz).
+                </div>
+                <div class="skill-group">
+                    <strong>Database & Tools:</strong> MySQL Database Design, Performance Tuning, Git/GitHub, Postman, Technical SEO.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Lead Programmer — <span class="company">Materiaplus Inc. (Canada)</span></span>
+                    <span class="date">Feb 2023 – Present</span>
+                </div>
+                <ul>
+                    <li>Direct technical architecture, full-stack software development, and release engineering for international applications.</li>
+                    <li>Integrated autonomous <strong>AI Agent handling skills & LLM pipelines</strong> for intelligent data processing and agentic task orchestration.</li>
+                    <li>Leveraged <strong>Laravel Livewire</strong> and modern reactive frontend frameworks to build dynamic, real-time UI components with minimal operational overhead.</li>
+                    <li>Established robust <strong>DevOps practices</strong>, utilizing Docker containerization, CI/CD pipeline automation, and server maintenance.</li>
+                    <li>Designed, developed, and maintained high-concurrency <strong>RESTful & SOAP API integrations</strong> across third-party software and internal systems.</li>
+                    <li>Orchestrated multi-currency <strong>Payment Gateway integrations</strong> ensuring secure, PCI-compliant transaction processing and subscription workflows.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Full Stack Web Developer — <span class="company">Field Booster LTD.</span></span>
+                    <span class="date">Nov 2021 – Jan 2023</span>
+                </div>
+                <ul>
+                    <li>Developed scalable full-stack applications utilizing PHP, Laravel, Vue.js, and MySQL.</li>
+                    <li>Engineered custom RESTful APIs for web/mobile integration with token authentication and data validation.</li>
+                    <li>Collaborated with product teams to optimize core web metrics, system security, and code quality.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Software Developer — <span class="company">MMIT Soft LTD.</span></span>
+                    <span class="date">Dec 2020 – Oct 2021</span>
+                </div>
+                <ul>
+                    <li>Created web applications and backend dashboards using PHP (Laravel, CodeIgniter) and MySQL databases.</li>
+                    <li>Optimized SQL queries and database schemas for high-traffic software solutions.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Web Developer — <span class="company">SA Websoft</span></span>
+                    <span class="date">Jan 2019 – Apr 2020</span>
+                </div>
+                <ul>
+                    <li>Built custom web solutions, frontend UI features, and Object-Oriented backend modules.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">SEO Expert — <span class="company">SA Websoft</span></span>
+                    <span class="date">Feb 2017 – Dec 2018</span>
+                </div>
+                <ul>
+                    <li>Executed technical SEO audits, speed optimizations, and keyword indexing strategies to boost web metrics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="projects-list">
+                <div class="project-item"><strong>Fabrics World USA:</strong> <a href="https://www.fabricsworldusa.com/" target="_blank">fabricsworldusa.com</a></div>
+                <div class="project-item"><strong>Frozberries:</strong> <a href="https://frozberries.com.au/" target="_blank">frozberries.com.au</a></div>
+                <div class="project-item"><strong>LankaBangla Portal:</strong> <a href="https://csp.lankabangla.com/" target="_blank">csp.lankabangla.com</a></div>
+                <div class="project-item"><strong>BKKB SSS Portal:</strong> <a href="http://sss.bkkb.gov.bd/" target="_blank">sss.bkkb.gov.bd</a></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <span><strong>B.Sc. in Computer Science & Engineering (CSE)</strong> — United International University</span>
+            </div>
+            <div class="education-item">
+                <span><strong>HSC (Science)</strong> — Government Science College</span>
+                <span class="date">2015</span>
+            </div>
+            <div class="education-item">
+                <span><strong>SSC (Science)</strong> — Motijheel Govt Boys' High School</span>
+                <span class="date">2013</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
